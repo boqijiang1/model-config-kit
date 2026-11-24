@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模型配置模块 · Demo</title>
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --ink: #26213b;
+    --sub: #5e5878;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.6 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 24px 60px; }
+  .hint {
+    margin: 0 0 22px;
+    padding: 12px 16px;
+    border: 1px dashed #cfc9e2;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--sub);
+    font-size: 13px;
+  }
+  .hint b { color: var(--ink); }
+  .hint code {
+    padding: 1px 6px;
+    border-radius: 5px;
+    background: #f1eefb;
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 12.5px;
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="hint">
+      <b>这是模型配置模块的独立演示</b>：下面整块界面由
+      <code>&lt;model-config-panel&gt;</code> 一个标签渲染，数据来自
+      <code>/api/model-config</code>。把它复制到别的软件里，只需挂一行路由 +
+      放一个标签。
+    </p>
+    <model-config-panel api-base="/api/model-config"></model-config-panel>
+  </main>
+  <script src="/static/ui/model-config.js"></script>
+</body>
+</html>

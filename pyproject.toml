@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "model-config-kit"
+version = "0.1.0"
+description = "可直接复用的模型配置模块：多供应商、Key 验证、模型清单、自动选型、体检、自带前端组件"
+requires-python = ">=3.10"
+dependencies = ["httpx>=0.24"]
+
+[project.optional-dependencies]
+web = ["fastapi>=0.110", "uvicorn>=0.27"]
+test = ["pytest>=8", "fastapi>=0.110"]
+
+[tool.setuptools]
+packages = ["model_config"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
